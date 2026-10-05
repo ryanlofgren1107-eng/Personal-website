@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to My Website</h1>
+<h2>My Goals</h2>
+<ul>
+  {% for goal in goals %}
+  <li>{{ goal.name }} - {% if goal.completed %}Completed{% else %}In progress{% endif %}</li>
+  {% endfor %}
+</ul>
+{% endblock content %}
